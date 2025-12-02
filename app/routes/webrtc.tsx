@@ -11,7 +11,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return(
     <>
-        <h1>This is ABOUT! 💝</h1>
+        <h1>This is WEBRTC! </h1>
         <Link to={'/'}>HOME</Link>
     </>
   );
