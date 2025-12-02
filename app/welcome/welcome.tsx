@@ -1,8 +1,12 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 import { Link } from "react-router";
+import "../i18n/config";
+import { useTranslation, Trans } from "react-i18next";
 
 export function Welcome() {
+  const { t, i18n } = useTranslation();
+
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -20,6 +24,15 @@ export function Welcome() {
             />
           </div>
         </header>
+        {/* translating test !!!!! */}
+        <div className="translation">
+          <button onClick={() => i18n.changeLanguage("en")}>🇬🇧 English</button>
+          <button onClick={() => i18n.changeLanguage("fr")}>🇫🇷 Français</button>
+          <p>{t("title", { name: "George" })}</p>
+          <p>{t("description.part1")}</p>
+          <p>{t("description.part2")}</p>
+        </div>
+
         <Link to="/about">About Us</Link>
         <Link to="/timeline">Timeline</Link>
         <Link to="/webrtc">webRTC</Link>
