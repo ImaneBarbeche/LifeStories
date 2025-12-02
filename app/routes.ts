@@ -4,5 +4,5 @@ export default [
     index("routes/home.tsx"),
     route("about", "routes/about.tsx"),
     route("timeline", "routes/timeline.tsx"),
-    route("webrtc", "routes/webrtc.tsx"),
+    route("offline-webrtc", "routes/offline-webrtc.tsx"),
 ] satisfies RouteConfig;
