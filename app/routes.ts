@@ -5,4 +5,5 @@ export default [
     route("about", "routes/about.tsx"),
     route("timeline", "routes/timeline.tsx"),
     route("webrtc", "routes/webrtc.tsx"),
+    route("sqlite", "routes/SQLite.tsx"),
 ] satisfies RouteConfig;
